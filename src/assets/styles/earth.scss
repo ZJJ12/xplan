@@ -1,0 +1,66 @@
+$cls:'earth_container';
+$container:'show_container';
+.#{$cls}{
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  canvas{
+    background-image: url('../images/bg_meteor.png'),url('../images/bg_meteor.png'),url('../images/bg_meteor.png');
+    background-repeat: no-repeat;
+    background-size: 64px;
+    animation: meteorMove 10s linear infinite;
+    width: 375px;
+      height: 600px;
+      position: relative;
+  }
+}
+@keyframes meteorMove{
+  0%{
+    background-position: 1040px 0,1240px -100px,300px -100px;
+  }
+  20%{
+    background-position:-10px 1000px,1240px -100px,300px -100px;
+  }
+  50%{
+    background-position:-10px 1040px,-100px 800px,300px -100px;
+  }
+  70%{
+    background-position:-10px 1040px,-100px 800px,300px -100px;
+  }
+  90%{
+    background-position:-10px 1040px,-100px 800px,-300px 600px;
+  }
+  100%{
+    background-position:-10px 1040px,-100px 800px,-300px 600px;
+  }
+}
+
+.#{$container}{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left:0;
+  top:0;
+  .page_container{
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    width: 375px;
+    height: 600px;
+    margin: -300px 0 0 -187.5px;
+    // overflow: hidden;
+    .page_show{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(0px);
+      transition: transform 1s ease;
+  
+    }
+  }
+
+}
